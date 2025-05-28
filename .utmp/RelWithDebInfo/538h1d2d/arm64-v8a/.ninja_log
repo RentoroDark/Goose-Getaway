@@ -1,0 +1,12 @@
+# ninja log v5
+68	329	7687885736519996	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	e7378b5d2f3d28b
+331	493	7687885738216573	E:/dev/Goose Getaway/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/538h1d2d/obj/arm64-v8a/libswappywrapper.so	2ca26bd7c08e8fc5
+37	1861	7687885751801404	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d9117041a15f4065
+20	1870	7687885751826740	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	876b86c31b1d97f2
+8	1889	7687885751882077	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	908f37604d354331
+57	1907	7687885752193494	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	9fa72d5e4a5d1ed
+1	1930	7687885752622794	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	847e0e65faf5543c
+44	2009	7687885753410207	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ef052de988f1f852
+30	2260	7687885755921529	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	5a493270e37e6b31
+14	2375	7687885757093552	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	52bacde0e71bd79f
+2375	2459	7687885757978528	E:/dev/Goose Getaway/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/538h1d2d/obj/arm64-v8a/libgame.so	ab70c44ce0f6a31b

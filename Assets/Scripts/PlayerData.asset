@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7131ef65dc26b4a91cb73490bc5914, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: 
+  HighScore: 0
+  energy: 20
+  maxEnergy: 20
+  energyTickTime: 1746470727
+  savedMoney: 773
+  playerMaxHealth: 5
+  skins: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
+  selectedSkin: 0
+  unlockedSkins: 01000000000000000000000000000000
+  diesFromFire: 1
+  healingStrenght: 1
+  healthRegeneration: 0
+  secondLife: 0
+  shield: 0
+  upgradePrices: f4010000e8030000e8030000f4010000d0070000b80b0000
+  upgradeLevels: 000000000000000000000000000000000000000000000000
+  sensetivity: 0.5
+  SFXvolume: 0.5
+  musicVolume: 0.2
+  availableRareSkins: 01000000020000000300000004000000050000000600000007000000
+  availableEpicSkins: 08000000090000000a0000000b0000000c0000000d000000
+  availableLegendarySkins: 0e0000000f000000
