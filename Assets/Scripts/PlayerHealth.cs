@@ -73,7 +73,6 @@ public class PlayerHealth : MonoBehaviour
     }
     IEnumerator FlashVignette()
     {
-        Debug.Log("vignette");
         vignette.active = true;
         for (float i = 0.3f; i < 0.4; i += 0.05f)
         {

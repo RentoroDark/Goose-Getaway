@@ -16,6 +16,6 @@ public class FirePosition : MonoBehaviour
         yield return null;
         Physics.Raycast(Camera.main.ScreenPointToRay(new Vector2(Screen.width * 0.5f, 0)), out hit);
         
-        transform.position = hit.point + new Vector3(0, 0.25f, -0.35f);
+        transform.position = hit.point + new Vector3(0, 0.25f, -0.4f);
     }
 }

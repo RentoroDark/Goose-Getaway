@@ -35,7 +35,6 @@ public class Regenerate: MonoBehaviour
         Array.Fill(cellTaken, null);
         GroundController.OnRegeneration += HandleRegeneration;
         StartCoroutine("InitializePools");
-        InvokeRepeating("PoolSizeDebug", 10, 10);
     }
     void OnDestroy()
     {
@@ -266,7 +265,6 @@ public class Regenerate: MonoBehaviour
     
     IEnumerator ReturnToPool(GameObject curObj)
     {
-        Debug.Log("Return");
         if (curObj.CompareTag("Wall"))
         {
             wallPool.Release(curObj);
@@ -332,13 +330,6 @@ public class Regenerate: MonoBehaviour
         yield return null;
     }
 
-    private void PoolSizeDebug()
-    {
-        Debug.Log("pool sizes");
-        Debug.Log(coinPool.CountAll);
-        Debug.Log(wallPool.CountAll);
-        Debug.Log(stampPool.CountAll);
-        Debug.Log(trapPool.CountAll);
-    }
+    
 }
     

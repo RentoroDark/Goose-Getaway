@@ -17,11 +17,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] GameObject gus;
     [SerializeField] ParticleSystem footsteps;
-    
-    
-    
+    [SerializeField] float acceleration = 0;
+    private float speed = 4;
+
+
     private float jumpBufferMaxTime = 0.1f;
-    private float jumpBufferCurTime;
+    [SerializeField]private float jumpBufferCurTime;
 
 
     void Update()
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         HandleMovement();
         HandleGravity();
         jumpBufferCurTime -= Time.deltaTime;
-        
+        speed += acceleration * Time.deltaTime;
     }
 
 
@@ -53,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void HandleMovement()
     {
-        player.Move(currentMovement * Time.deltaTime);
+        player.Move((currentMovement + new Vector3(0, 0, speed)) * Time.deltaTime);
         transform.localPosition = new Vector3(Math.Clamp(transform.localPosition.x, -1.2f, 1.2f), transform.localPosition.y, transform.localPosition.z); 
     }
 

@@ -1,12 +1,14 @@
 apply plugin: 'com.android.library'
 apply from: '../shared/keepUnitySymbols.gradle'
+apply from: '../shared/common.gradle'
 **APPLY_PLUGINS**
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'androidx.lifecycle:lifecycle-process:2.4.1' // Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:12
-    implementation 'com.yandex.android:mobileads:7.12.1' // Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:7
+    implementation 'androidx.lifecycle:lifecycle-process:2.4.1' // Packages/com.yandex.mobileads/Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:12
+    implementation 'com.yandex.android:mobileads:8.1.0' // Packages/com.yandex.mobileads/Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:7
+    implementation 'io.appmetrica.analytics:analytics:8.0.0' // Packages/com.yandex.mobileads/Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:17
 // Android Resolver Dependencies End
 **DEPS**}
 
@@ -14,7 +16,6 @@ dependencies {
 android {
   packagingOptions {
       exclude ('/lib/armeabi/*' + '*')
-      exclude ('/lib/armeabi-v7a/*' + '*')
       exclude ('/lib/mips/*' + '*')
       exclude ('/lib/mips64/*' + '*')
       exclude ('/lib/x86/*' + '*')

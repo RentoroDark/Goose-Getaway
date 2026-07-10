@@ -20,7 +20,10 @@ public class MainCanvasScript : MonoBehaviour
     public void StartGame()
     {
         energyController.SpendEnergy();
-        SceneManager.LoadScene(1);
+        if (playerData.HighScore == 0)
+            SceneManager.LoadScene(2);
+        else
+            SceneManager.LoadScene(1);
     }
 
     public void OpenCanvas(GameObject canvas)

@@ -44,7 +44,6 @@ public class PlayerData : ScriptableObject
     }
     public void SavePlayerData()
     {
-        Debug.Log("Save");
         saveAction?.Invoke();
     }
     public void RestoreEnergy(int amount)

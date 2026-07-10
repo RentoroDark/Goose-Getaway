@@ -31,23 +31,24 @@ public class AdBannerController : MonoBehaviour
 
         // Replace demo Unit ID 'demo-banner-yandex' with actual Ad Unit ID
         string adUnitId = "demo-banner-yandex";
-
+        AdRequest adRequest = new(adUnitId);
         if (this.banner != null)
         {
             this.banner.Destroy();
         }
         // Set sticky banner width
-        BannerAdSize bannerSize = BannerAdSize.InlineSize(GetScreenWidthDp(), 50);
-        this.banner = new Banner(adUnitId, bannerSize, AdPosition.TopCenter);
+        BannerAdSize bannerSize = BannerAdSize.Inline(GetScreenWidthDp(), 50);
+
+        
+        this.banner = new Banner(bannerSize, AdPosition.TopCenter);
 
         this.banner.OnAdLoaded += this.HandleAdLoaded;
-        this.banner.OnAdFailedToLoad += this.HandleAdFailedToLoad;
+        this.banner.OnAdFailedToLoad += this.HandleAdFailedToLoad;/* 
         this.banner.OnReturnedToApplication += this.HandleReturnedToApplication;
-        this.banner.OnLeftApplication += this.HandleLeftApplication;
+        this.banner.OnLeftApplication += this.HandleLeftApplication; */
         this.banner.OnAdClicked += this.HandleAdClicked;
         this.banner.OnImpression += this.HandleImpression;
-
-        this.banner.LoadAd(this.CreateAdRequest());
+        banner.LoadAd(adRequest);
         Debug.Log("Banner is requested");
     }
 
@@ -55,10 +56,6 @@ public class AdBannerController : MonoBehaviour
     {
         int screenWidth = (int)Screen.safeArea.width;
         return ScreenUtils.ConvertPixelsToDp(screenWidth);
-    }
-    private AdRequest CreateAdRequest()
-    {
-        return new AdRequest.Builder().Build();
     }
 
     
@@ -77,7 +74,7 @@ public class AdBannerController : MonoBehaviour
         Debug.Log("HandleLeftApplication event received");
     }
 
-    public void HandleReturnedToApplication(object sender, EventArgs args)
+    /* public void HandleReturnedToApplication(object sender, EventArgs args)
     {
         Debug.Log("HandleReturnedToApplication event received");
     }
@@ -85,7 +82,7 @@ public class AdBannerController : MonoBehaviour
     public void HandleAdLeftApplication(object sender, EventArgs args)
     {
         Debug.Log("HandleAdLeftApplication event received");
-    }
+    } */
 
     public void HandleAdClicked(object sender, EventArgs args)
     {

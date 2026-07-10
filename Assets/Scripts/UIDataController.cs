@@ -16,14 +16,10 @@ public class UIDataController : MonoBehaviour
 
     private void UpdateHealth()
     {
-        Debug.Log(health.text);
-        Debug.Log(playerHealth.health);
         health.text = $"{playerHealth.health}";
     }
     private void UpdateMoney()
     {
-        Debug.Log(money.text);
-        Debug.Log(playerMoney.collectedMoney);
         money.text = $"{playerMoney.collectedMoney}";
     }
 }

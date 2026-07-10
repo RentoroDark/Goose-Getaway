@@ -1,4 +1,4 @@
-repository "Goose Getaway@NocturnalGamesGroup@cloud"
+repository "Cloud Repositories/Goose Getaway@10170502061931@cloud"
   path "/"
     br "/main"
     co "/main"

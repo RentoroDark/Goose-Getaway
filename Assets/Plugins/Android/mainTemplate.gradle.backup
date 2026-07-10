@@ -1,11 +1,14 @@
 apply plugin: 'com.android.library'
 apply from: '../shared/keepUnitySymbols.gradle'
+apply from: '../shared/common.gradle'
 **APPLY_PLUGINS**
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'com.yandex.android:mobileads-mediation:7.11.0.0' // Assets/YandexMobileAds/Editor/YandexMobileadsMediationDependencies.xml:13
+    implementation 'androidx.lifecycle:lifecycle-process:2.4.1' // Packages/com.yandex.mobileads/Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:12
+    implementation 'com.yandex.android:mobileads:8.1.0' // Packages/com.yandex.mobileads/Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:7
+    implementation 'io.appmetrica.analytics:analytics:8.0.0' // Packages/com.yandex.mobileads/Assets/YandexMobileAds/Editor/YandexMobileadsDependencies.xml:17
 // Android Resolver Dependencies End
 **DEPS**}
 
